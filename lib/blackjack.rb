@@ -69,9 +69,10 @@ end
 def runner
   welcome 
     card_total = initial_round #current total and tell user their number they have 
+    binding.pry 
       until card_total > 21 #continue game until number exceeds 21
       card_total = hit?(card_total)
-      binding.pry 
+      
       display_card_total(card_total)
       end
        end_game(card_total) #prints out once user has lost
